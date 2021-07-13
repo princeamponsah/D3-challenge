@@ -4,8 +4,8 @@ var svgHeight = 500;
 
 var margin = {
     top: 20,
-    right: 40,
-    bottom: 60,
+    right: 20,
+    bottom: 100,
     left: 100
   };
   
@@ -119,4 +119,6 @@ d3.csv("data/data.csv").then(function(data) {
       .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
       .attr("class", "axisText")
       .text("In Poverty (%)");
+}).catch(function(error) {
+    console.log(error);
 });
